@@ -1,6 +1,8 @@
 # Zeno Framework
 
-A modular platform for building decentralized, scalable AI systems that integrate blockchain, distributed storage, swarm intelligence, and reinforcement learning. The **Zeno Framework** is designed as a foundational model to illustrate how these advanced concepts can be combined in a cohesive manner, enabling developers and researchers to prototype cutting-edge AI solutions.
+A modular platform for building decentralized, scalable AI systems powered by DeepSeek-R1, a state-of-the-art language model trained through large-scale reinforcement learning. The framework integrates blockchain, distributed storage, swarm intelligence, and reinforcement learning capabilities.
+
+The **Zeno Framework** demonstrates how DeepSeek-R1's advanced reasoning capabilities can be leveraged alongside decentralized technologies to create sophisticated AI solutions. By combining DeepSeek-R1's multi-stage training and natural reasoning abilities with distributed systems architecture, the framework enables developers and researchers to prototype cutting-edge AI applications with enhanced decision-making capabilities and scalable deployment options.
 
 ---
 
