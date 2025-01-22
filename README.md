@@ -1,54 +1,60 @@
-# **Aether Framework**
+# Zeno Framework
 
-### **Revolutionizing AI with Decentralized Intelligence**
-
-**Aether Framework** is an open-source platform for building modular, scalable, and decentralized AI systems. It’s designed for developers to create autonomous agents with capabilities such as task delegation, multi-modal processing, swarm intelligence, and blockchain integration.
-
-This project isn’t just a framework; it’s a showcase of collaborative innovation between human creators and AI agents. Every component of this repository has been conceptualized, designed, and refined through the synergy of human oversight and machine intelligence.
+A modular platform for building decentralized, scalable AI systems that integrate blockchain, distributed storage, swarm intelligence, and reinforcement learning. The **Zeno Framework** is designed as a foundational model to illustrate how these advanced concepts can be combined in a cohesive manner, enabling developers and researchers to prototype cutting-edge AI solutions.
 
 ---
 
-## **Key Features**
+## Key Components
 
-### **1. Modular AI Agents**
-- Agents capable of multi-modal task execution (text, image, audio).
-- Autonomous decision-making through reinforcement learning.
-- Collaboration and task delegation using a swarm-based framework.
+### 1. Modular AI Agents
 
-### **2. Blockchain Integration**
-- **Solana**: Native wallet creation, transactions, and smart contract interaction.
-- **Ethereum**: Balance retrieval, token transfers, and decentralized logging.
+- Multi-modal capabilities for handling text, image, and audio data processing.
+- Agents autonomously make decisions using reinforcement learning, improving over time.
+- Inter-agent messaging and task delegation with minimal configuration.
 
-### **3. Decentralized Data**
-- **IPFS Integration**: Decentralized file storage and retrieval for transparent and resilient systems.
+### 2. Decentralized Storage
 
-### **4. Swarm Intelligence**
-- Collaborative decision-making using Redis-backed proposals and voting.
-- Advanced consensus mechanisms leveraging Lua scripts and transactions for scalability.
+- **IPFS Integration**: Store and retrieve data in a decentralized environment to enhance redundancy, transparency, and resilience.
 
-### **5. Reinforcement Learning**
-- Self-optimization using Q-learning for dynamic task execution improvement.
+### 3. Blockchain Interfaces
+
+- **Solana**: Create and manage wallets, execute transactions, and interact with smart contracts.
+- **Ethereum**: Retrieve balances, transfer tokens, and log immutable data on the Ethereum network.
+
+### 4. Swarm Intelligence
+
+- Redis-based mechanism for group decision-making and voting.
+- Lua scripting enables high-performance distributed consensus and task delegation at scale.
+
+### 5. Reinforcement Learning
+
+- Agents leverage Q-learning (or similar algorithms) to optimize task execution dynamically.
+- Facilitate experimental or research-oriented environments for adaptive AI behaviors.
 
 ---
 
-## **Getting Started**
+## Getting Started
 
-### **1. Installation**
+### 1. Installation
+
 Clone the repository and install dependencies:
+
 ```bash
-git clone https://github.com/yourusername/aether-framework.git
-cd aether-framework
+git clone https://github.com/yourusername/zeno-framework.git
+cd zeno-framework
 pip install -r requirements.txt
 ```
 
-### **2. Dependencies**
-- Python 3.8+
-- Redis (for distributed task queue)
-- IPFS daemon (for decentralized storage)
-- Ethereum RPC (e.g., Infura)
-- Solana CLI
+### 2. Dependencies
 
-### **3. Run the Examples**
+- Python 3.8+
+- Redis (for distributed message queues and swarm coordination)
+- IPFS daemon (for decentralized file storage)
+- Ethereum RPC endpoint (e.g., Infura)
+- Solana CLI and relevant local network or mainnet configuration
+
+### 3. Run the Examples
+
 ```bash
 # Basic Agent Example
 python examples/basic_agent_example.py
@@ -62,39 +68,80 @@ python examples/agent_collaboration_example.py
 
 ---
 
-## **Core Components**
-- **AI Agent**: Modular and autonomous agents for decentralized systems.
-- **Knowledge Graph**: Store, query, and visualize relationships between concepts.
-- **Swarm Consensus**: Dynamic task delegation and voting using Redis and Lua.
-- **Blockchain Manager**: Interact with Solana and Ethereum networks.
-- **IPFS Utility**: Decentralized file handling.
+## Architectural Overview
+
+1. **AI Agent**  
+   Each agent has a configurable pipeline for handling specific tasks (e.g., NLP, image recognition). Agents can broadcast requests and delegate workload, ensuring modularity and scalability.
+
+2. **Knowledge Graph**  
+   A graph-based structure to store and query relationships among various entities, tasks, and learned behaviors.
+
+3. **Swarm Consensus**  
+   Coordination and task assignment among multiple agents via Redis-based messaging. Agents vote on proposals, automating decision-making with built-in consensus rules.
+
+4. **Blockchain Manager**  
+   Unified interface for interacting with different blockchains, minimizing the need for specialized code. Examples include checking wallet balances, sending tokens, or storing activity logs.
+
+5. **IPFS Utility**  
+   Manages file operations over IPFS, leveraging content-addressable storage to reduce duplication and enhance reliability.
 
 ---
 
-## **Basic Model for Complex Tasks**
+## Technical Rationale
 
-This framework is intended as a **basic model** to demonstrate how advanced concepts like **blockchain**, **IPFS**, **swarm intelligence**, and **reinforcement learning** can be combined into a single system. While it integrates multiple state-of-the-art technologies, it is not intended to represent a fully production-ready solution but rather serve as a **starting point for further development**. 
+Combining AI, blockchain, IPFS, and distributed consensus within a single framework enables exploration of decentralized approaches to complex problems:
 
-By providing this framework, we aim to inspire and empower developers to explore these technologies in a practical way without the overwhelming complexity often associated with combining them. Use it, extend it, and adapt it to your needs.
-
----
-
-## **Built with AI**
-The Aether Framework represents a collaborative effort between human creativity and AI-driven agents. Every line of code has been guided and enhanced by AI, making this repository a testament to the power of human-AI synergy.
+- **Reliability**: Decentralized storage reduces single points of failure.
+- **Auditability**: Blockchains provide transparent, tamper-resistant logs.
+- **Scalability**: Swarm intelligence distributes workload among multiple agents.
+- **Adaptability**: Reinforcement learning allows for continuous improvement and self-optimization.
 
 ---
 
-## **License and Disclaimer**
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+## AI Foundation: DeepSeek-R1
 
+The Zeno Framework leverages DeepSeek-R1, a state-of-the-art language model trained through large-scale reinforcement learning. This choice brings several key advantages:
 
+### Core Capabilities
 
-This project is released under the MIT License. However, not all parts of the codebase are published under this license. Some components may be subject to different licensing terms, which are not publicly disclosed in this repository. For inquiries regarding specific parts of the code or additional licensing, please contact the maintainers.
+- **Enhanced Reasoning**: DeepSeek-R1's architecture is specifically optimized for complex reasoning tasks, making it ideal for autonomous agent decision-making.
+- **Multi-Stage Training**: The model incorporates sophisticated training techniques that improve readability and consistency in outputs.
+- **Scale-Ready**: Available in various sizes (1.5B to 70B parameters) to suit different deployment needs.
+
+### Implications for Zeno Framework
+
+1. **Improved Decision Making**
+
+   - Agents can handle complex, multi-step reasoning tasks more effectively
+   - Better handling of edge cases and unexpected scenarios
+   - More reliable autonomous operations
+
+2. **Resource Considerations**
+
+   - Different model sizes allow for flexible deployment based on computational resources
+   - Smaller models (1.5B-14B) suitable for edge devices
+   - Larger models (32B-70B) optimal for central coordination nodes
+
+3. **Development Approach**
+
+   - Framework design leverages DeepSeek-R1's natural reasoning capabilities
+   - Reduced need for complex prompt engineering
+   - More intuitive agent-to-agent communication patterns
+
+4. **Limitations**
+   - Performance depends on model size and available computational resources
+   - May require fine-tuning for specific use cases
+   - Regular updates needed to maintain alignment with latest model versions
+
+---
+
+## License and Usage Disclaimer
+
+This repository is published under the MIT License. However, certain components may have different licensing terms or restrictions not publicly disclosed here. For specific licensing inquiries, please contact the maintainers.
 
 ### Disclaimer
-The published code is intended as a basic model for demonstration purposes and is not designed for production-grade or foolproof use cases. While it integrates cutting-edge concepts like blockchain, IPFS, swarm intelligence, and reinforcement learning, this framework serves primarily as a starting point for further exploration and development.
 
-Important Notes:
-- The framework may require additional modifications and testing for real-world applications.
-- We do not guarantee the security, reliability, or performance of the published code.
-- Users are encouraged to perform their own audits and enhancements before deploying in sensitive or critical environments.
+- This framework is intended as an illustrative starting point for research and development.
+- It is not production-hardened and comes with no guarantees of reliability, security, or performance.
+- Users should rigorously test and audit the code before deploying in mission-critical or sensitive environments.
+- The goal is to demonstrate possible integrations and encourage open experimentation, not to provide a universal solution.
