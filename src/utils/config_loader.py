@@ -5,11 +5,11 @@ import yaml
 class ConfigLoader:
     """Advanced configuration loader for managing YAML files and environment variables."""
 
-    def __init__(self, config_file="config.yaml", env_prefix="AETHER_"):
+    def __init__(self, config_file="config.yaml", env_prefix="zeno_"):
         """
         Initialize the configuration loader.
         :param config_file: Path to the YAML configuration file.
-        :param env_prefix: Prefix for environment variables (default: 'AETHER_').
+        :param env_prefix: Prefix for environment variables (default: 'zeno_').
         """
         self.config_file = config_file
         self.env_prefix = env_prefix

@@ -5,7 +5,7 @@ from solana.publickey import PublicKey
 from solana.keypair import Keypair
 
 class SolanaTaskLogger:
-    """Handles on-chain task logging for Aether agents."""
+    """Handles on-chain task logging for zeno agents."""
 
     def __init__(self, rpc_url="https://api.mainnet-beta.solana.com"):
         self.client = Client(rpc_url)

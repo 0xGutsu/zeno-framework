@@ -1,8 +1,9 @@
-# Aether Framework Usage
+# zeno Framework Usage
 
 ## Getting Started
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/aether-framework.git
-   cd aether-framework
+   git clone https://github.com/your-username/zeno-framework.git
+   cd zeno-framework
+   ```

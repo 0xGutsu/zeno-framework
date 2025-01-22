@@ -2,7 +2,7 @@ from qdrant_client import QdrantClient
 from qdrant_client.models import PointStruct
 
 class QdrantClientWrapper:
-    def __init__(self, host="localhost", port=6333, collection_name="aether"):
+    def __init__(self, host="localhost", port=6333, collection_name="zeno"):
         self.client = QdrantClient(host=host, port=port)
         self.collection_name = collection_name
 
