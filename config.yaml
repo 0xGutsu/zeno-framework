@@ -1,0 +1,67 @@
+# Environment settings
+environment: development  # Options: development, staging, production
+
+# AI Agent configuration
+aether:
+  agent:
+    id: 1                        # Unique ID for the agent
+    role: "manager"              # Role of the agent (e.g., worker, explorer, coordinator)
+    max_tasks: 10                # Maximum tasks the agent can handle at once
+
+# LLM integration
+llm:
+  provider: "openai"             # Supported: openai, anthropic, ollama
+  base_url: "https://api.openai.com"
+  model: "gpt-4"
+  api_timeout: 10                # Timeout for API calls in seconds
+  retry_attempts: 3              # Retry attempts for failed requests
+
+# Swarm Intelligence
+swarm:
+  redis:
+    host: "localhost"            # Redis server hostname
+    port: 6379                   # Redis server port
+  consensus_threshold: 3         # Minimum votes needed to reach consensus
+
+# Blockchain integration
+blockchain:
+  solana:
+    enabled: true                # Enable/disable Solana integration
+    rpc_url: "https://api.mainnet-beta.solana.com"  # Solana RPC endpoint
+    wallet_env_var: "SOLANA_WALLET_PATH"  # Wallet path stored in environment variable
+  ethereum:
+    enabled: true                # Enable/disable Ethereum integration
+    rpc_url: "https://mainnet.infura.io/v3/${ETH_RPC_KEY}"  # Use environment variable for secure API key
+    wallet_env_var: "ETHEREUM_WALLET_PRIVATE_KEY"  # Wallet private key stored in environment variable
+    gas_limit: 21000             # Default gas limit for Ethereum transactions
+    max_retries: 5               # Maximum retries for failed Ethereum transactions
+
+# IPFS (Decentralized Storage) configuration
+ipfs:
+  enabled: true                  # Enable/disable IPFS integration
+  api_url: "http://127.0.0.1:5001/api/v0"  # Base URL for IPFS API
+  default_storage_lifetime: 86400  # Default storage lifetime for files in seconds
+
+# Logging and Debugging
+logging:
+  level: "INFO"                  # Logging level: DEBUG, INFO, WARNING, ERROR, CRITICAL
+  file: "logs/aether.log"        # Path to the log file
+  rotate_logs: true              # Rotate log files to prevent large sizes
+  max_file_size: 10MB            # Maximum size of log files
+  keep_logs: 7                   # Number of rotated log files to keep
+
+# Advanced Features
+features:
+  enable_reinforcement_learning: true
+  enable_multi_agent_collaboration: true
+  enable_knowledge_graph: true
+
+# Deployment and Scaling
+deployment:
+  replicas: 3                    # Number of agent replicas to run
+  load_balancer: "nginx"         # Load balancer type (e.g., nginx)
+  autoscaling:
+    enabled: true
+    min_replicas: 2
+    max_replicas: 10
+    cpu_threshold: 70            # CPU usage threshold for triggering scaling
